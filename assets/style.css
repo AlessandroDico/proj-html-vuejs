@@ -5,5 +5,117 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    height: 100%;
+    padding: 0 30px;
+}
+
+/* ----------FINE REGOLE GENERICHE--------- */
+header {
+    height: 90px;
+    background-color: blue;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER-LEFT */
+.logo-container {
+    height: 60px;
+    width: 300px;
+}
+
+.logo-container > img {
+    height: 100%;
+    width: 100%;
+}
+
+/* HEADER-RIGHT */
+
+.header-right {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header-right > ul {
+    display: flex;
+}
+
+.header-right > ul > li {
+    margin: 0 25px;
+}
+
+.header-right > ul > li > a {
+    color: #ffffff;
+    padding: 5px;
+}
+
+.header-right > button {
+    color: #ffffff;
+    background-color: #fcd66c;
+    height: 30px;
+    width: 100px;
+    margin-left: 25px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ------------INIZIO SEZIONE JUMBOTRON------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
