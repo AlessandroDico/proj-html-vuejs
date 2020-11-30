@@ -16,6 +16,12 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border: 1.5px solid #fcd66c;
+    width: 160px;
+    background-color: #fcd66c;
+}
+
 button {
     color: #ffffff;
     padding: 10px 20px;
@@ -27,7 +33,7 @@ button {
 }
 
 .container {
-    max-width: 1500px;
+    max-width: 1700px;
     margin: auto;
     height: 100%;
     padding: 0 30px;
@@ -134,8 +140,63 @@ section.make-difference {
     border: 2px solid #fcd66c;
 }
 
+/* --------------INIZIO SEZIONE MISSION------------ */
 
+.mission-container {
+    display: flex;
+}
 
+.mission-left {
+    width: 70%;
+    padding: 80px;
+}
+
+.mission-left > h2 {
+    font-size: 30px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.mission-left > p {
+    margin: 20px 0;
+    line-height: 30px;
+}
+
+.mission-left > button {
+    background-color: #fcd66c;
+    margin: 15px 0;
+}
+
+/* MISSION RIGHT */
+.mission-right  {
+    width: 30%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/home-content-bg-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.statistics > div {
+    margin: 40px 0;
+    color: #ffffff;
+    font-size: 35px;
+}
+
+.statistics p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.statistics span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
 
 
 
