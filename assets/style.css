@@ -16,6 +16,11 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
 hr {
     border: 1.5px solid #fcd66c;
     width: 160px;
@@ -152,9 +157,7 @@ section.make-difference {
 }
 
 .mission-left > h2 {
-    font-size: 30px;
     margin: 15px 0;
-    text-transform: uppercase;
 }
 
 .mission-left > p {
@@ -198,10 +201,71 @@ section.make-difference {
     letter-spacing: 1px;
 }
 
+/* --------INIZIO OUR VALUES-------- */
+section.our-values {
+    background-image: url('img/home-content-bg-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
+.our-values-container {
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
 
+.our-values-top {
+    text-align: center;
+    margin: 50px 0;
+}
 
+.our-values-top > h2,
+.our-values-top > p {
+    margin: 25px 0;
+}
 
+hr.center-hr {
+    margin: auto;
+}
+
+/* OUR VALUES BOTTOM */
+.our-values-bottom {
+    display: flex;
+}
+
+.values-box {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+}
+
+.values-box > i {
+    color: #fcd66c;
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.values-box > span {
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.values-box > p {
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 30px;
+}
+
+.values-box > button {
+    background-color: #fcd66c;
+    width: 131px;
+    margin: 20px auto;
+}
 
 
 
