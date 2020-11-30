@@ -16,6 +16,16 @@ a {
     text-decoration: none;
 }
 
+button {
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
 .container {
     max-width: 1500px;
     margin: auto;
@@ -26,7 +36,8 @@ a {
 /* ----------FINE REGOLE GENERICHE--------- */
 header {
     height: 90px;
-    background-color: blue;
+    position: absolute;
+    width: 100%
 }
 
 .header-container {
@@ -40,6 +51,7 @@ header {
 .logo-container {
     height: 60px;
     width: 300px;
+    cursor: pointer;
 }
 
 .logo-container > img {
@@ -54,7 +66,6 @@ header {
     display: flex;
     align-items: center;
     font-size: 12px;
-    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -72,20 +83,56 @@ header {
 }
 
 .header-right > button {
-    color: #ffffff;
     background-color: #fcd66c;
-    height: 30px;
-    width: 100px;
     margin-left: 25px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
 /* ------------INIZIO SEZIONE JUMBOTRON------------ */
 
+section.make-difference {
+    background-image: url("img/home-page-slider.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-position: top; */
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 300px 0;
+    color: #ffffff;
+}
+
+.jumbotron > h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.jumbotron > p {
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+.jumbotron > .jumbo-buttons > button {
+    margin: 15px 10px;
+    background-color: transparent;
+}
+
+.jumbotron > .jumbo-buttons > .mission-button {
+    margin: 15px 10px;
+    border: 2px solid #ffffff;
+}
+
+.jumbotron > .jumbo-buttons > .donate-button {
+    margin: 15px 10px;
+    color: #fcd66c;
+    border: 2px solid #fcd66c;
+}
 
 
 
