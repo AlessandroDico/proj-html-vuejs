@@ -27,6 +27,10 @@ hr {
     background-color: #fcd66c;
 }
 
+hr.center-hr {
+    margin: auto;
+}
+
 button {
     color: #ffffff;
     padding: 10px 20px;
@@ -35,6 +39,7 @@ button {
     font-size: 12px;
     letter-spacing: 1px;
     cursor: pointer;
+    outline: none;
 }
 
 .container {
@@ -101,6 +106,7 @@ header {
 /* ------------INIZIO SEZIONE JUMBOTRON------------ */
 
 section.make-difference {
+    background-color: #78787b;
     background-image: url("img/home-page-slider.jpg");
     background-size: cover;
     background-position: center;
@@ -173,7 +179,7 @@ section.make-difference {
 /* MISSION RIGHT */
 .mission-right  {
     width: 30%;
-    background-color: red;
+    background-color: #ed6864;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,37 +209,42 @@ section.make-difference {
 
 /* --------INIZIO OUR VALUES-------- */
 section.our-values {
+    background-color: #78787b;
     background-image: url('img/home-content-bg-2.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.our-values-container {
+.our-values-container, .recent-causes-container {
     padding: 100px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    text-align: center;
 }
 
 .our-values-top {
     text-align: center;
     margin: 50px 0;
+    color: #ffffff;
 }
 
 .our-values-top > h2,
-.our-values-top > p {
+.recent-causes-top > h2 {
     margin: 25px 0;
 }
 
-hr.center-hr {
-    margin: auto;
+.our-values-top > p,
+.recent-causes-top > p {
+    margin: 35px 0;
 }
+
 
 /* OUR VALUES BOTTOM */
 .our-values-bottom {
     display: flex;
+    color: #ffffff;
 }
 
 .values-box {
@@ -267,14 +278,39 @@ hr.center-hr {
     margin: 20px auto;
 }
 
+/* ----------INIZIO RECENT CAUSES--------- */
+/* alcuni parametri sono impostati in our values */
 
+.recent-causes-container {
+    padding: 80px 50px;
+}
 
+.recent-causes-top {
+    font-family: 'Raleway', sans-serif;
+}
 
+.recent-causes-bottom {
+    display: flex;
+    margin: 40px 0;
+}
 
+.causes-img-container {
+    width: 25%;
+    height: 25%;
+    margin: 0 20px;
+}
 
+.causes-img-container > img {
+    width: 100%;
+    height: 100%;
+}
 
-
-
+.recent-causes > button {
+    background-color: #ed6864;
+    width: 100%;
+    padding: 50px 0;
+    font-size: 14px;
+}
 
 
 
