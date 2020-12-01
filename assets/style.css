@@ -143,12 +143,13 @@ section.make-difference {
     margin: 15px 0;
 }
 
-.jumbotron > .jumbo-buttons > button {
+.jumbotron > .jumbo-buttons > button,
+.transparent-button {
     margin: 15px 10px;
     background-color: transparent;
 }
 
-.jumbotron > .jumbo-buttons > .mission-button {
+.transparent-button {
     margin: 15px 10px;
     border: 2px solid #ffffff;
 }
@@ -225,8 +226,9 @@ section.our-values {
 
 .our-values-container,
 .recent-causes-container,
-.latest-articles-container {
-    padding: 100px 50px;
+.latest-articles-container,
+.change-a-life-container {
+    padding: 90px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,13 +244,15 @@ section.our-values {
 
 .our-values-top > h2,
 .recent-causes-top > h2,
-.latest-articles-top > h2 {
+.latest-articles-top > h2,
+.change-a-life-container > h2 {
     margin: 25px 0;
 }
 
 .our-values-top > p,
 .recent-causes-top > p,
-.latest-articles-top > p {
+.latest-articles-top > p,
+.change-a-life-container > p {
     margin: 35px 0;
 }
 
@@ -293,10 +297,10 @@ section.our-values {
 /* ----------INIZIO RECENT CAUSES--------- */
 /* alcuni parametri sono impostati in our values */
 
-.recent-causes-container,
+/* .recent-causes-container,
 .latest-articles-container {
     padding: 80px 50px;
-}
+} */
 
 .recent-causes-top {
     font-family: 'Raleway', sans-serif;
@@ -406,8 +410,26 @@ section.our-values {
 .latest-articles button {
     width: 70%;
     padding: 15px 0;
-    margin: 50px 0;
+    margin-bottom: 50px;
 }
+
+/*---------- INIZIO CHANGE A LIFE-------------- */
+/* alcuni parametri sono impostati in our values */
+section.change-a-life {
+    background-image: url('img/home-footer.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: #78787b;
+    color: #ffffff;
+}
+
+.change-a-life-container > p {
+    width: 700px;
+    margin: 20px 0;
+    line-height: 30px;
+}
+
+
 
 
 
