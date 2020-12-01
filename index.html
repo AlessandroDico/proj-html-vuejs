@@ -21,7 +21,7 @@
                     <div class="header-container">
                         <div class="header-left">
                             <div class="logo-container">
-                                <img :src="'assets/img/' + logoHeader" alt="">
+                                <img :src="'assets/img/' + logoHeader" alt="logo-avada">
                             </div>
                         </div>
                         <div class="header-right">
@@ -285,6 +285,26 @@
                     <small>|</small>
                     <small>Powered by wordpress</small>
                 </div>
+                <div class="footer-icons-container" v-for="footerIcon in footerIcons">
+                    <!-- <div> -->
+                        <a :href="footerIcon.link">
+                            <i :class="footerIcon.icon"></i>
+                        </a>
+                    <!-- </div> -->
+                </div>
+
+            </footer>
+            <!-- INIZIO FOOTER -->
+            <!-- <footer>
+                <div class="copyright-container">
+                    <small>&copy;</small>
+                    <small>Copyright 2012 - </small>
+                    <small>2020 Avada theme by theme fusion</small>
+                    <small>|</small>
+                    <small>All rights reserved</small>
+                    <small>|</small>
+                    <small>Powered by wordpress</small>
+                </div>
                 <div class="footer-icons-container">
                     <div class="fb-icon">
                         <i class="fab fa-facebook-f"></i>
@@ -300,10 +320,8 @@
                     </div>
                 </div>
 
-            </footer>
+            </footer> -->
         </div>
-
-
 
 
         <script src="assets/main.js" charset="utf-8"></script>
