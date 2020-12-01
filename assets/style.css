@@ -485,7 +485,7 @@ section.change-a-life {
 }
 
 .change-a-life-container > p {
-    width: 700px;
+    max-width: 700px;
     margin: 20px 0;
     line-height: 30px;
 }
@@ -507,7 +507,6 @@ section.change-a-life {
 
 footer {
     background-color: #a2abae17;
-    height: 150px;
     text-align: center;
     padding: 30px 0;
 }
@@ -529,7 +528,7 @@ footer small {
     display: inline-block;
 }
 
-.footer-icons-container a {
+.footer-icons-container > a {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -538,13 +537,12 @@ footer small {
     justify-content: center;
     align-items: center;
     margin: 20px;
-    cursor: pointer;
 }
 .footer-icons-container > div:hover i {
     color: #ffe293;
 }
 
-footer i {
+.footer-icons-container i {
     color: #fcd66c;
     font-size: 25px;
 }

@@ -275,24 +275,24 @@
             </div>
             <!-- INIZIO FOOTER -->
             <footer>
-                <!-- per ora lo faccio statico poi dinamico -->
-                <div class="copyright-container">
-                    <small>&copy;</small>
-                    <small>Copyright 2012 - </small>
-                    <small>2020 Avada theme by theme fusion</small>
-                    <small>|</small>
-                    <small>All rights reserved</small>
-                    <small>|</small>
-                    <small>Powered by wordpress</small>
-                </div>
-                <div class="footer-icons-container" v-for="footerIcon in footerIcons">
-                    <!-- <div> -->
+                <div class="container">
+                    <div class="copyright-container">
+
+                        <small>&copy;</small>
+                        <small>Copyright 2012 - </small>
+                        <small>2020 Avada theme by theme fusion</small>
+                        <small>|</small>
+                        <small>All rights reserved</small>
+                        <small>|</small>
+                        <small>Powered by wordpress</small>
+                        <a href="#"></a>
+                    </div>
+                    <div class="footer-icons-container" v-for="footerIcon in footerIcons">
                         <a :href="footerIcon.link">
                             <i :class="footerIcon.icon"></i>
                         </a>
-                    <!-- </div> -->
+                    </div>
                 </div>
-
             </footer>
             <!-- INIZIO FOOTER -->
             <!-- <footer>
