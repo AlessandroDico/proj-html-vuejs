@@ -20,6 +20,11 @@ h2 {
     text-transform: uppercase;
     font-size: 30px;
     font-weight: 100;
+    color: #353841;
+}
+
+p {
+    color: #353841;
 }
 
 h3 {
@@ -141,6 +146,7 @@ section.make-difference {
 .jumbotron > p {
     letter-spacing: 1px;
     margin: 15px 0;
+    color: #ffffff;
 }
 
 .jumbotron > .jumbo-buttons > button,
@@ -208,6 +214,7 @@ section.make-difference {
 .statistics p {
     font-size: 14px;
     margin: 10px 0;
+    color: #ffffff;
 }
 
 .statistics span {
@@ -256,6 +263,13 @@ section.our-values {
     margin: 35px 0;
 }
 
+.our-values-top > h2,
+.our-values-top > p,
+.change-a-life-container > h2,
+.change-a-life-container > p {
+    color: #ffffff;
+}
+
 
 /* OUR VALUES BOTTOM */
 .our-values-bottom {
@@ -286,6 +300,7 @@ section.our-values {
     font-size: 15px;
     margin: 20px 0;
     line-height: 30px;
+    color: #ffffff;
 }
 
 .values-box > button {
@@ -429,10 +444,51 @@ section.change-a-life {
     line-height: 30px;
 }
 
+/* --------------PREFOOTER------------- */
 
+.prefooter-img-container {
+    margin: 30px auto;
+    width: 300px;
+    height: 65px;
+}
 
+.prefooter-img-container > img {
+    width: 100%;
+    height: 100%;
+}
 
+/* ------INIZIO FOOTER-------- */
 
+footer {
+    background-color: #a2abae;
+    height: 150px;
+    text-align: center;
+}
+
+footer small {
+    text-transform: uppercase;
+}
+
+.footer-icons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons-container > div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+footer i {
+    color: #fcd66c;
+    font-size: 30px;
+}
 
 
 
