@@ -460,13 +460,23 @@ section.change-a-life {
 /* ------INIZIO FOOTER-------- */
 
 footer {
-    background-color: #a2abae;
+    background-color: #a2abae17;
     height: 150px;
     text-align: center;
+    padding: 30px 0;
 }
 
 footer small {
     text-transform: uppercase;
+    color: #bababc;
+}
+
+footer small {
+    padding: 0 5px;
+}
+
+.copyright-container small:nth-child(3) {
+    padding: 0 5px 0 0;
 }
 
 .footer-icons-container {
@@ -475,19 +485,19 @@ footer small {
 }
 
 .footer-icons-container > div {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 footer i {
     color: #fcd66c;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
