@@ -502,7 +502,7 @@ footer {
 }
 
 /* DECOMMENTARE PER SECONDA SOLUZIONE */
-.copyright-container small {
+/* .copyright-container small {
     text-transform: uppercase;
     color: #bababc;
     padding: 0 5px;
@@ -516,7 +516,7 @@ footer {
 .copyright-container small:nth-child(5) {
     border-left: 1px solid #bababc;
     border-right: 1px solid #bababc;
-}
+} */
 
 /* DECOMMENTARE PER SECONDA SOLUZIONE */
 
