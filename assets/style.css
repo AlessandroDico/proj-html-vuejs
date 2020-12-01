@@ -339,11 +339,6 @@ section.our-values {
 /* ----------INIZIO RECENT CAUSES--------- */
 /* alcuni parametri sono impostati in our values */
 
-/* .recent-causes-container,
-.latest-articles-container {
-    padding: 80px 50px;
-} */
-
 .recent-causes-top {
     font-family: 'Raleway', sans-serif;
 }
@@ -378,7 +373,7 @@ section.our-values {
 
 .recent-causes > button:hover,
 .latest-articles button:hover {
-    background-color: #10668a;
+    background-color: #3c8494;
 }
 
 /* ----------LATEST ARTICLES----- */
@@ -403,7 +398,6 @@ section.latest-articles {
 .latest-articles-bottom-left {
     max-width: 50%;
     margin-right: 30px;
-    /* border: 1px solid #bababc; */
     -webkit-box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);
     box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);;
 }
@@ -439,11 +433,7 @@ section.latest-articles {
 :last-child.human-stories-container {
     padding-bottom: 0;
 }
-/*
-.human-stories-img-container {
-    height: 72px;
-    width: 91.5px;
-} */
+
 .human-stories-img-container {
     width: 140px;
     height: 116px;
@@ -511,17 +501,50 @@ footer {
     padding: 30px 0;
 }
 
-footer small {
+/* DECOMMENTARE PER SECONDA SOLUZIONE */
+.copyright-container small {
     text-transform: uppercase;
     color: #bababc;
-}
-
-footer small {
     padding: 0 5px;
+    font-size: 12px;
 }
 
 .copyright-container small:nth-child(3) {
     padding: 0 5px 0 0;
+}
+
+.copyright-container small:nth-child(5) {
+    border-left: 1px solid #bababc;
+    border-right: 1px solid #bababc;
+}
+
+/* DECOMMENTARE PER SECONDA SOLUZIONE */
+
+.copyright-container {
+    display: inline-block;
+    padding: 0 3px;
+    color: #bababc;
+}
+
+.copyright-container > p {
+    text-transform: uppercase;
+    color: #bababc;
+    font-size: 12px;
+}
+
+.footer-top {
+    margin: 15px 0;
+    color: #bababc;
+}
+
+.footer-top  a {
+    text-transform: uppercase;
+    color: #bababc;
+    font-size: 12px;
+}
+
+.footer-top  a:hover {
+    color: #fcd66c;
 }
 
 .footer-icons-container {
@@ -536,7 +559,7 @@ footer small {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
 }
 .footer-icons-container > div:hover i {
     color: #ffe293;

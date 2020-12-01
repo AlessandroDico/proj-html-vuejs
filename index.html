@@ -273,54 +273,52 @@
                     <img src="assets\img\avada-charity-mobile-logo-retina.png" alt="">
                 </div>
             </div>
-            <!-- INIZIO FOOTER -->
+
+            <!-- INIZIO PRIMA SOLUZIONE FOOTER -->
+            <!-- TUTTO AGGIUNTO DINAMICAMENTE -->
             <footer>
                 <div class="container">
-                    <div class="copyright-container">
-
+                    <div class="footer-top">
                         <small>&copy;</small>
-                        <small>Copyright 2012 - </small>
-                        <small>2020 Avada theme by theme fusion</small>
-                        <small>|</small>
-                        <small>All rights reserved</small>
-                        <small>|</small>
-                        <small>Powered by wordpress</small>
-                        <a href="#"></a>
+                        <div class="copyright-container" v-for="voice in footerVoices">
+                            <a :href="voice.link" v-if="voice.link">{{voice.write}}</a>
+                            <p v-else>{{voice.write}}</p>
+                        </div>
                     </div>
-                    <div class="footer-icons-container" v-for="footerIcon in footerIcons">
-                        <a :href="footerIcon.link">
-                            <i :class="footerIcon.icon"></i>
-                        </a>
+                    <div class="footer-bottom">
+                        <div class="footer-icons-container" v-for="footerIcon in footerIcons">
+                            <a :href="footerIcon.link">
+                                <i :class="footerIcon.icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </footer>
-            <!-- INIZIO FOOTER -->
+            <!-- FINE PRIMA SOLUZIONE FOOTER -->
+            <!-- INIZIO SECONDA SOLUZIONE CON SOLO ICONE AGGIUNTE DINAMICAMENTE -->
+            <!-- DESELEZIONARE IL CODICE CORRISPONDENTE NEL CSS -->
             <!-- <footer>
-                <div class="copyright-container">
-                    <small>&copy;</small>
-                    <small>Copyright 2012 - </small>
-                    <small>2020 Avada theme by theme fusion</small>
-                    <small>|</small>
-                    <small>All rights reserved</small>
-                    <small>|</small>
-                    <small>Powered by wordpress</small>
-                </div>
-                <div class="footer-icons-container">
-                    <div class="fb-icon">
-                        <i class="fab fa-facebook-f"></i>
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="copyright-container">
+                            <small>&copy;</small>
+                            <small>Copyright 2012 - </small>
+                            <small>2020 Avada theme by</small>
+                            <a href="https://theme-fusion.com/">theme fusion</a>
+                            <small>All rights reserved</small>
+                            <a href="https://www.wordpress.com/">Powered by wordpress</a>
+                        </div>
                     </div>
-                    <div class="inst-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="twt-icon">
-                        <i class="fab fa-twitter"></i>
-                    </div>
-                    <div class="yt-icon">
-                        <i class="fab fa-youtube"></i>
+                    <div class="footer-bottom">
+                        <div class="footer-icons-container" v-for="footerIcon in footerIcons">
+                            <a :href="footerIcon.link">
+                                <i :class="footerIcon.icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             </footer> -->
+            <!-- FINE SECONDA SOLUZIONE -->
         </div>
 
 
