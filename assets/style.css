@@ -53,6 +53,7 @@ button {
     letter-spacing: 1px;
     cursor: pointer;
     outline: none;
+    transition: 0.2s ease-in;
 }
 
 .container {
@@ -111,9 +112,17 @@ header {
     padding: 5px;
 }
 
+.header-right > ul > li > a:hover {
+    color: #fcd66c;
+}
+
 .header-right > button {
     background-color: #fcd66c;
     margin-left: 25px;
+}
+
+.header-right > button:hover {
+    background-color: black;
 }
 
 /* ------------INIZIO SEZIONE JUMBOTRON------------ */
@@ -166,6 +175,16 @@ section.make-difference {
     border: 2px solid #fcd66c;
 }
 
+.jumbotron > .jumbo-buttons > .donate-button:hover {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.transparent-button:hover {
+    color: #fcd66c;
+    border: 2px solid #fcd66c;
+}
+
 /* --------------INIZIO SEZIONE MISSION------------ */
 
 .mission-container {
@@ -189,6 +208,10 @@ section.make-difference {
 .mission-left > button {
     background-color: #fcd66c;
     margin: 15px 0;
+}
+
+.mission-left > button:hover {
+    background-color: black;
 }
 
 /* MISSION RIGHT */
@@ -309,6 +332,10 @@ section.our-values {
     margin: 20px auto;
 }
 
+.values-box > button:hover {
+    background-color: black;
+}
+
 /* ----------INIZIO RECENT CAUSES--------- */
 /* alcuni parametri sono impostati in our values */
 
@@ -349,18 +376,32 @@ section.our-values {
     font-size: 14px;
 }
 
+.recent-causes > button:hover,
+.latest-articles button:hover {
+    background-color: #10668a;
+}
+
 /* ----------LATEST ARTICLES----- */
 /* alcuni parametri sono impostati in our values e in recent causes */
+section.latest-articles {
+    background-color: #f2f2f2;
+}
 
+.latest-articles-container {
+    padding: 90px 0;
+}
 
 .latest-articles-bottom {
-    width: 70%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
 }
 
 /* parte di sinistra */
 
 .latest-articles-bottom-left {
-    width: 50%;
+    max-width: 50%;
     margin-right: 30px;
     /* border: 1px solid #bababc; */
     -webkit-box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);
@@ -369,12 +410,14 @@ section.our-values {
 
 .latest-img-container {
     width: 100%;
-    height: 380px;
+    height: 420px;
 }
 
 .latest-img-container > img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .latest-img-paragraph {
@@ -384,7 +427,7 @@ section.our-values {
 /* parte di destra */
 
 .latest-articles-bottom-right {
-    width: 50%;
+    max-width: 50%;
 }
 
 .human-stories-container {
@@ -401,9 +444,12 @@ section.our-values {
     height: 72px;
     width: 91.5px;
 } */
+.human-stories-img-container {
+    width: 140px;
+    height: 116px;
+}
 
 .human-stories-img-container > img {
-    width: 100%;
     height: 100%;
 }
 
@@ -425,7 +471,7 @@ section.our-values {
 .latest-articles button {
     width: 70%;
     padding: 15px 0;
-    margin-bottom: 50px;
+    margin-top: 35px;
 }
 
 /*---------- INIZIO CHANGE A LIFE-------------- */
@@ -493,6 +539,10 @@ footer small {
     justify-content: center;
     align-items: center;
     margin: 20px;
+    cursor: pointer;
+}
+.footer-icons-container > div:hover i {
+    color: #ffe293;
 }
 
 footer i {
