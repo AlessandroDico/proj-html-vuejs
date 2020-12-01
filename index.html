@@ -14,301 +14,294 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     </head>
     <body>
-    <!-- INIZIO HEADER -->
-        <header>
-            <div class="container">
-                <div class="header-container">
-                    <div class="header-left">
-                        <div class="logo-container">
-                            <img src="assets/img/avada-charity-logo.png" alt="">
-                        </div>
-                    </div>
-                    <div class="header-right">
-                        <!-- creiamo il menu inizialmente popolato staticamente -->
-                        <ul>
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Mission</a>
-                            </li>
-                            <li>
-                                <a href="#">Causes</a>
-                            </li>
-                            <li>
-                                <a href="#">Journal</a>
-                            </li>
-                        </ul>
-                        <button type="button">Donate</button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- FINE HEADER -->
-        <main>
-            <!-- INIZIO JUMBOTRON -->
-            <section class="make-difference">
+        <div id="root">
+        <!-- INIZIO HEADER -->
+            <header>
                 <div class="container">
-                    <div class="jumbotron">
-                        <h1>
-                            Make a difference
-                        </h1>
-                        <p>
-                            As long as poverty, injustice & inequality persist, none of us can truly rest
-                        </p>
-                        <div class="jumbo-buttons">
-                            <button type="button" class="mission-button transparent-button">Our mission</button>
-                            <button type="button" class="donate-button">Donate now</button>
+                    <div class="header-container">
+                        <div class="header-left">
+                            <div class="logo-container">
+                                <img :src="'assets/img/' + logoHeader" alt="">
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <!-- creiamo il menu inizialmente popolato staticamente -->
+                            <ul v-for="(voice, key, index) in menuVoices">
+                                <li>
+                                    <a :href="voice">{{key}}</a>
+                                </li>
+                            </ul>
+                            <button type="button">{{headerButton}}</button>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- FINE JUMBOTRON -->
-            <!-- INIZIO OUR MISSION -->
-            <section class="our-mission">
-                <div class="mission-container">
-                    <div class="mission-left">
-                        <h2>Every moment counts</h2>
-                        <hr class="left-hr">
-                        <p>
-                            Lorem ipsum dolor sit amet, repudiandae amet quos dolores consectetur adipisicing elit. Repellendus quam cum sequi eius adipisci repudiandae amet quos dolores earum quaerat.
-                        </p>
-                        <p>
-                            Ipsam laudantium possimus velit eius non quasi recusandae. voluptatibus, tenetur animi architecto, repudiandae amet quos dolores nihil ea eos deleniti.
-                            Nobis doloribus dolorem voluptas, cumque laboriosam sit odit, accusamus vel, soluta magnam ipsa doloremque!
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde modi ipsum explicabo possimus optio.
-                        </p>
-                        <button type="button">Our mission</button>
-                    </div>
-                    <div class="mission-right">
-                        <div class="statistics">
-                            <div class="volunteers">
-                                <i class="far fa-heart"></i>
-                                <span>2032</span>
-                                <p>volunteers worldwide</p>
-                            </div>
-                            <div class="active-projects">
-                                <i class="fas fa-globe"></i>
-                                <span>132</span>
-                                <p>Active projects</p>
-                            </div>
-                            <div class="donated">
-                                <i class="fas fa-dollar-sign"></i>
-                                <span>3.8M</span>
-                                <p>Donated</p>
+            </header>
+            <!-- FINE HEADER -->
+            <main>
+                <!-- INIZIO JUMBOTRON -->
+                <section class="make-difference">
+                    <div class="container">
+                        <div class="jumbotron">
+                            <h1>
+                                Make a difference
+                            </h1>
+                            <p>
+                                As long as poverty, injustice & inequality persist, none of us can truly rest
+                            </p>
+                            <div class="jumbo-buttons">
+                                <button type="button" class="mission-button transparent-button">Our mission</button>
+                                <button type="button" class="donate-button">Donate now</button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- FINE OUR MISSION -->
-            <!-- INIZIO OUR VALUES -->
-            <section class="our-values">
-                <div class="container">
-                    <div class="our-values-container">
-                        <div class="our-values-top">
-                            <h2>Our values</h2>
-                            <hr class="center-hr">
-                            <p>Think Big. Act Bigger.</p>
+                </section>
+                <!-- FINE JUMBOTRON -->
+                <!-- INIZIO OUR MISSION -->
+                <section class="our-mission">
+                    <div class="mission-container">
+                        <div class="mission-left">
+                            <h2>Every moment counts</h2>
+                            <hr class="left-hr">
+                            <p>
+                                Lorem ipsum dolor sit amet, repudiandae amet quos dolores consectetur adipisicing elit. Repellendus quam cum sequi eius adipisci repudiandae amet quos dolores earum quaerat.
+                            </p>
+                            <p>
+                                Ipsam laudantium possimus velit eius non quasi recusandae. voluptatibus, tenetur animi architecto, repudiandae amet quos dolores nihil ea eos deleniti.
+                                Nobis doloribus dolorem voluptas, cumque laboriosam sit odit, accusamus vel, soluta magnam ipsa doloremque!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur unde modi ipsum explicabo possimus optio.
+                            </p>
+                            <button type="button">Our mission</button>
                         </div>
-                        <div class="our-values-bottom">
-                            <div class="values-box clean-water">
-                                <i class="fas fa-tint"></i>
-                                <span>Clean Water</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
-                                </p>
-                                <button type="button">Learn more</button>
-                            </div>
-                            <div class="values-box vaccinations">
-                                <i class="fas fa-stethoscope"></i>
-                                <span>Vaccinations</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
-                                </p>
-                                <button type="button">Learn more</button>
-                            </div>
-                            <div class="values-box education">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Education</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
-                                </p>
-                                <button type="button">Learn more</button>
-                            </div>
-                            <div class="values-box farming">
-                                <i class="fab fa-pagelines"></i>
-                                <span>Farming</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
-                                </p>
-                                <button type="button">Learn more</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- FINE OUR VALUES -->
-            <!-- INIZIO RECENT CAUSES -->
-            <section class="recent-causes">
-                <div class="container">
-                    <div class="recent-causes-container">
-                        <div class="recent-causes-top">
-                            <h2>Recent causes</h2>
-                            <hr class="center-hr">
-                            <p>We run projects in over 30 countries in 5 continents</p>
-                        </div>
-                        <div class="recent-causes-bottom">
-                            <div class="causes-img-container">
-                                <img src="assets/img/avada-charity-fair-trade-featured-400x300.jpg" alt="">
-                            </div>
-                            <div class="causes-img-container">
-                                <img src="assets/img/avada-charity-shelter-featured-400x300.jpg" alt="">
-                            </div>
-                            <div class="causes-img-container">
-                                <img src="assets/img/avada-charity-farming-featured-400x300.jpg" alt="">
-                            </div>
-                            <div class="causes-img-container">
-                                <img src="assets/img/avada-charity-vaccines-featured-400x300.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button type="button">View all our causes</button>
-            </section>
-            <!-- FINE RECENT CAUSES -->
-            <!-- INIZIO LATEST ARTICLES -->
-            <section class="latest-articles">
-                <div class="container">
-                    <div class="latest-articles-container">
-                        <div class="latest-articles-top">
-                            <h2>Latest articles</h2>
-                            <hr class="center-hr">
-                            <p>Together we make all the difference</p>
-                        </div>
-                        <div class="latest-articles-bottom">
-                            <div class="latest-articles-bottom-left">
-                                <div class="latest-img-container">
-                                    <img src="assets/img/photo-1444213007800-cff19e1677ac-400x300.jpg" alt="">
+                        <div class="mission-right">
+                            <div class="statistics">
+                                <div class="volunteers">
+                                    <i class="far fa-heart"></i>
+                                    <span>2032</span>
+                                    <p>volunteers worldwide</p>
                                 </div>
-                                <div class="latest-img-paragraph">
-                                    <h3>
-                                        Understanding community complexities
-                                    </h3>
+                                <div class="active-projects">
+                                    <i class="fas fa-globe"></i>
+                                    <span>132</span>
+                                    <p>Active projects</p>
+                                </div>
+                                <div class="donated">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>3.8M</span>
+                                    <p>Donated</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FINE OUR MISSION -->
+                <!-- INIZIO OUR VALUES -->
+                <section class="our-values">
+                    <div class="container">
+                        <div class="our-values-container">
+                            <div class="our-values-top">
+                                <h2>Our values</h2>
+                                <hr class="center-hr">
+                                <p>Think Big. Act Bigger.</p>
+                            </div>
+                            <div class="our-values-bottom">
+                                <div class="values-box clean-water">
+                                    <i class="fas fa-tint"></i>
+                                    <span>Clean Water</span>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, totam?
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
                                     </p>
+                                    <button type="button">Learn more</button>
                                 </div>
-                            </div>
-                            <!-- parte di destra -->
-                            <div class="latest-articles-bottom-right">
-                                <div class="human-stories-container">
-                                    <div class="human-stories-img-container">
-                                        <img src="assets\img\photo-1444664597500-035db93e2323-177x142.jpg" alt="">
-                                    </div>
-                                    <div class="human-stories-paragraph">
-                                        <h3>The human story of uniqueness</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
-                                        </p>
-                                    </div>
+                                <div class="values-box vaccinations">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>Vaccinations</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
+                                    </p>
+                                    <button type="button">Learn more</button>
                                 </div>
-                                <div class="human-stories-container">
-                                    <div class="human-stories-img-container">
-                                        <img src="assets\img\photo-1447430617419-95715602278e-177x142.jpg" alt="">
-                                    </div>
-                                    <div class="human-stories-paragraph">
-                                        <h3>The human story of uniqueness</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
-                                        </p>
-                                    </div>
+                                <div class="values-box education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
+                                    </p>
+                                    <button type="button">Learn more</button>
                                 </div>
-                                <div class="human-stories-container">
-                                    <div class="human-stories-img-container">
-                                        <img src="assets\img\photo-1460230525622-630fe3294cd7-177x142.jpg" alt="">
-                                    </div>
-                                    <div class="human-stories-paragraph">
-                                        <h3>The human story of uniqueness</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
-                                        </p>
-                                    </div>
+                                <div class="values-box farming">
+                                    <i class="fab fa-pagelines"></i>
+                                    <span>Farming</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, consectetur aliquid!
+                                    </p>
+                                    <button type="button">Learn more</button>
                                 </div>
-                                <div class="human-stories-container">
-                                    <div class="human-stories-img-container">
-                                        <img src="assets\img\photo-1460600421604-5e138c208b9c-177x142.jpg" alt="">
-                                    </div>
-                                    <div class="human-stories-paragraph">
-                                        <h3>The human story of uniqueness</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button">View all our articles</button>
-                    </div>
-                </div>
-            </section>
-            <!-- FINE LATEST ARTICLES -->
-            <!-- INIZIO CHANGE A LIFE -->
-            <section class="change-a-life">
-                <div class="container">
-                    <div class="change-a-life-container">
-                        <h2>Change a life today</h2>
-                        <hr class="center-hr">
-                        <p>
-                            As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life. Get in touch today and start making the difference.
-                        </p>
-                        <div class="change-a-life-buttons">
-                            <button type="button" class="transparent-button">Volunteer</button>
-                            <button type="button" class="transparent-button">Donate now</button>
-                        </div>
 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FINE OUR VALUES -->
+                <!-- INIZIO RECENT CAUSES -->
+                <section class="recent-causes">
+                    <div class="container">
+                        <div class="recent-causes-container">
+                            <div class="recent-causes-top">
+                                <h2>Recent causes</h2>
+                                <hr class="center-hr">
+                                <p>We run projects in over 30 countries in 5 continents</p>
+                            </div>
+                            <div class="recent-causes-bottom">
+                                <div class="causes-img-container">
+                                    <img src="assets/img/avada-charity-fair-trade-featured-400x300.jpg" alt="">
+                                </div>
+                                <div class="causes-img-container">
+                                    <img src="assets/img/avada-charity-shelter-featured-400x300.jpg" alt="">
+                                </div>
+                                <div class="causes-img-container">
+                                    <img src="assets/img/avada-charity-farming-featured-400x300.jpg" alt="">
+                                </div>
+                                <div class="causes-img-container">
+                                    <img src="assets/img/avada-charity-vaccines-featured-400x300.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button">View all our causes</button>
+                </section>
+                <!-- FINE RECENT CAUSES -->
+                <!-- INIZIO LATEST ARTICLES -->
+                <section class="latest-articles">
+                    <div class="container">
+                        <div class="latest-articles-container">
+                            <div class="latest-articles-top">
+                                <h2>Latest articles</h2>
+                                <hr class="center-hr">
+                                <p>Together we make all the difference</p>
+                            </div>
+                            <div class="latest-articles-bottom">
+                                <div class="latest-articles-bottom-left">
+                                    <div class="latest-img-container">
+                                        <img src="assets/img/photo-1444213007800-cff19e1677ac-400x300.jpg" alt="">
+                                    </div>
+                                    <div class="latest-img-paragraph">
+                                        <h3>
+                                            Understanding community complexities
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, totam?
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- parte di destra -->
+                                <div class="latest-articles-bottom-right">
+                                    <div class="human-stories-container">
+                                        <div class="human-stories-img-container">
+                                            <img src="assets\img\photo-1444664597500-035db93e2323-177x142.jpg" alt="">
+                                        </div>
+                                        <div class="human-stories-paragraph">
+                                            <h3>The human story of uniqueness</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="human-stories-container">
+                                        <div class="human-stories-img-container">
+                                            <img src="assets\img\photo-1447430617419-95715602278e-177x142.jpg" alt="">
+                                        </div>
+                                        <div class="human-stories-paragraph">
+                                            <h3>The human story of uniqueness</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="human-stories-container">
+                                        <div class="human-stories-img-container">
+                                            <img src="assets\img\photo-1460230525622-630fe3294cd7-177x142.jpg" alt="">
+                                        </div>
+                                        <div class="human-stories-paragraph">
+                                            <h3>The human story of uniqueness</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="human-stories-container">
+                                        <div class="human-stories-img-container">
+                                            <img src="assets\img\photo-1460600421604-5e138c208b9c-177x142.jpg" alt="">
+                                        </div>
+                                        <div class="human-stories-paragraph">
+                                            <h3>The human story of uniqueness</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, eaque dolor sit amet!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button">View all our articles</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- FINE LATEST ARTICLES -->
+                <!-- INIZIO CHANGE A LIFE -->
+                <section class="change-a-life">
+                    <div class="container">
+                        <div class="change-a-life-container">
+                            <h2>Change a life today</h2>
+                            <hr class="center-hr">
+                            <p>
+                                As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life. Get in touch today and start making the difference.
+                            </p>
+                            <div class="change-a-life-buttons">
+                                <button type="button" class="transparent-button">Volunteer</button>
+                                <button type="button" class="transparent-button">Donate now</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- FINE CHANGE A LIFE -->
+            </main> <!-- FINE MAIN -->
+            <!-- INIZIO PREFOOTER -->
+            <div class="prefooter">
+                <div class="prefooter-img-container">
+                    <img src="assets\img\avada-charity-mobile-logo-retina.png" alt="">
+                </div>
+            </div>
+            <!-- INIZIO FOOTER -->
+            <footer>
+                <!-- per ora lo faccio statico poi dinamico -->
+                <div class="copyright-container">
+                    <small>&copy;</small>
+                    <small>Copyright 2012 - </small>
+                    <small>2020 Avada theme by theme fusion</small>
+                    <small>|</small>
+                    <small>All rights reserved</small>
+                    <small>|</small>
+                    <small>Powered by wordpress</small>
+                </div>
+                <div class="footer-icons-container">
+                    <div class="fb-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="inst-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="twt-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="yt-icon">
+                        <i class="fab fa-youtube"></i>
                     </div>
                 </div>
-            </section>
-            <!-- FINE CHANGE A LIFE -->
-        </main> <!-- FINE MAIN -->
-        <!-- INIZIO PREFOOTER -->
-        <div class="prefooter">
-            <div class="prefooter-img-container">
-                <img src="assets\img\avada-charity-mobile-logo-retina.png" alt="">
-            </div>
+
+            </footer>
         </div>
-        <!-- INIZIO FOOTER -->
-        <footer>
-            <!-- per ora lo faccio statico poi dinamico -->
-            <div class="copyright-container">
-                <small>&copy;</small>
-                <small>Copyright 2012 - </small>
-                <small>2020 Avada theme by theme fusion</small>
-                <small>|</small>
-                <small>All rights reserved</small>
-                <small>|</small>
-                <small>Powered by wordpress</small>
-            </div>
-            <div class="footer-icons-container">
-                <div class="fb-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="inst-icon">
-                    <i class="fab fa-instagram"></i>
-                </div>
-                <div class="twt-icon">
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <div class="yt-icon">
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
-
-        </footer>
 
 
 
