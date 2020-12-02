@@ -230,7 +230,7 @@ section.our-values {
 .recent-causes-container,
 .latest-articles-container,
 .change-a-life-container {
-    padding: 90px 50px;
+    padding: 40px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -269,14 +269,16 @@ section.our-values {
 /* OUR VALUES BOTTOM */
 .our-values-bottom {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color: #ffffff;
 }
 
 .values-box {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    padding: 20px;
+    min-width: 200px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -315,10 +317,11 @@ section.our-values {
     font-family: 'Raleway', sans-serif;
 }
 
-.recent-causes-bottom,
-.latest-articles-bottom {
+.recent-causes-bottom {
     display: flex;
     margin: 40px 0;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .causes-img-container {
@@ -386,6 +389,7 @@ section.latest-articles {
     max-width: 1200px;
     display: flex;
     align-items: flex-start;
+    margin: 40px 0;
 }
 
 /* parte di sinistra */
@@ -623,12 +627,43 @@ footer {
         font-size: 50px;
     }
 
+    /* ----RECENT CAUSES--- */
+
+    .causes-img-container {
+        width: calc(50% - 40px );
+    }
+
     /* ----OUR MISSION----- */
 
     .mission-left {
         padding: 30px;
     }
+
+    .values-box {
+        width: 50%;
+        padding: 10px 20px;
+    }
+
+    /* ----RECENT CAUSES---- */
+    .recent-causes-bottom {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .causes-img-container {
+        width: 100%;
+        margin: 10px;
+    }
 }
+
+/* ______inizio media da 768px in su__________ */
+@media screen and (min-width: 487px) {
+    .causes-img-container {
+        max-width: calc(50% - 20px);
+        min-width: 185px;
+        margin: 10px;
+    }
+}
+/* ______inizio media da 768px in su__________ */
 
 @media screen and (min-width: 768px) {
 
@@ -656,6 +691,25 @@ footer {
         justify-content: space-around;
         height: 70%;
     }
+
+    /* ----OUR VALUES---- */
+
+    .our-values-container,
+    .latest-articles-container,
+    .change-a-life-container {
+        padding: 90px 50px;
+    }
+
+    .values-box {
+        padding: 25px;
+    }
+
+    /* ----RECENT CAUSES---- */
+    .causes-img-container {
+        max-width: calc(50% - 40px);
+        margin: 20px;
+    }
+
 
 
 }
@@ -705,6 +759,34 @@ footer {
     /* ---JUMBO--- */
     .jumbotron {
         padding: 300px 0;
+    }
+
+    /* ----OUR VALUES--- */
+    .our-values-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: #ffffff;
+    }
+
+    .values-box {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        min-width: 197px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* ----RECENT CAUSES--- */
+    .recent-causes-container {
+        padding: 90px 0px;
+    }
+
+    .causes-img-container {
+        max-width: calc(25% - 20px );
+        margin: 0 10px;
+        padding: 0;
     }
 
 
