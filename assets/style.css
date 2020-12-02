@@ -18,7 +18,7 @@ a {
 
 h2 {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
     color: #353841;
 }
@@ -35,7 +35,7 @@ h3 {
 
 hr {
     border: 1.5px solid #fcd66c;
-    width: 160px;
+    width: 100px;
     background-color: #fcd66c;
 }
 
@@ -63,6 +63,7 @@ button {
 }
 
 /* ----------FINE REGOLE GENERICHE--------- */
+
 header {
     height: 90px;
     position: absolute;
@@ -78,10 +79,11 @@ header {
 
 /* HEADER-LEFT */
 .logo-container {
-    height: 60px;
-    width: 300px;
+    height: 38px;
+    width: 190px;
     cursor: pointer;
 }
+
 
 .logo-container > img {
     height: 100%;
@@ -91,38 +93,14 @@ header {
 /* HEADER-RIGHT */
 
 .header-right {
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    letter-spacing: 1px;
+    display: none;
 }
 
-.header-right > ul {
-    display: flex;
-}
-
-.header-right > ul > li {
-    margin: 0 25px;
-}
-
-.header-right > ul > li > a {
-    color: #ffffff;
-    padding: 5px;
-}
-
-.header-right > ul > li > a:hover {
+.hamburger-menu {
+    font-size: 30px;
     color: #fcd66c;
 }
 
-.header-right > button {
-    background-color: #fcd66c;
-    margin-left: 25px;
-}
-
-.header-right > button:hover {
-    background-color: black;
-}
 
 /* ------------INIZIO SEZIONE JUMBOTRON------------ */
 
@@ -139,13 +117,14 @@ section.make-difference {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 300px 0;
+    text-align: center;
+    padding: 150px 0;
     color: #ffffff;
 }
 
 .jumbotron > h1 {
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     letter-spacing: 1px;
     margin: 15px 0;
@@ -186,13 +165,8 @@ section.make-difference {
 
 /* --------------INIZIO SEZIONE MISSION------------ */
 
-.mission-container {
-    display: flex;
-}
-
 .mission-left {
-    width: 70%;
-    padding: 80px;
+    padding: 20px;
 }
 
 .mission-left > h2 {
@@ -215,7 +189,6 @@ section.make-difference {
 
 /* MISSION RIGHT */
 .mission-right  {
-    width: 30%;
     background-color: #ed6864;
     display: flex;
     flex-direction: column;
@@ -228,7 +201,7 @@ section.make-difference {
 }
 
 .statistics > div {
-    margin: 40px 0;
+    margin: 20px 0;
     color: #ffffff;
     font-size: 35px;
 }
@@ -395,7 +368,7 @@ section.our-values {
 
 .recent-causes > button:hover,
 .latest-articles button:hover {
-    background-color: #3c8494;
+    background-color: #408292;
 }
 
 /* ----------LATEST ARTICLES----- */
@@ -621,6 +594,121 @@ footer {
 }
 
 
+/* _____@@@@@@ inizio media @@@@@@_____ */
+
+/* ______inizio media da 420px in su__________ */
+@media screen and (min-width: 420px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    hr {
+        border: 1.5px solid #fcd66c;
+        width: 160px;
+        background-color: #fcd66c;
+    }
+    /* ------FINE REGOLE GENERICHE---- */
+    /* ------HEADER------ */
+    .logo-container {
+        height: 60px;
+        width: 300px;
+    }
+
+    /* ---JUMBO--- */
+    .jumbotron {
+        padding: 220px 0;
+    }
+
+    .jumbotron > h1 {
+        font-size: 50px;
+    }
+
+    /* ----OUR MISSION----- */
+
+    .mission-left {
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* -----OUR MISSION----- */
+    .mission-container {
+        display: flex;
+    }
+
+    .mission-left {
+        width: 70%;
+        padding: 80px;
+    }
+
+    .mission-left > h2 {
+        margin: 15px 0;
+    }
+    /* MISSION RIGHT */
+    .mission-right  {
+        width: 30%;
+    }
+
+    .statistics {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70%;
+    }
+
+
+}
+/* ______inizio media da 972px in su__________ */
+
+
+@media screen and (min-width: 972px) {
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .header-right {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .header-right > ul {
+        display: flex;
+    }
+
+    .header-right > ul > li {
+        margin: 0 25px;
+    }
+
+    .header-right > ul > li > a {
+        color: #ffffff;
+        padding: 5px;
+    }
+
+    .header-right > ul > li > a:hover {
+        color: #fcd66c;
+    }
+
+    .header-right > button {
+        background-color: #fcd66c;
+        margin-left: 25px;
+    }
+
+    .header-right > button:hover {
+        background-color: black;
+    }
+
+    /* ---JUMBO--- */
+    .jumbotron {
+        padding: 300px 0;
+    }
+
+
+}
 
 
 
