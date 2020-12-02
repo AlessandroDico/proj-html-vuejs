@@ -354,6 +354,29 @@ section.our-values {
     min-width: 185px;
     min-height: 138px;
     margin: 0 20px;
+    position: relative;
+}
+
+.causes-img-container > .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+
+.causes-img-container:hover > .overlay {
+    background-color: #fcd66c80;
+    opacity: 0.9;
+    color: #ffffff;
 }
 
 .causes-img-container > img {
@@ -404,6 +427,29 @@ section.latest-articles {
 .latest-img-container {
     width: 100%;
     height: 420px;
+    position: relative;
+}
+
+.latest-img-container > .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+}
+
+.latest-img-container:hover > .overlay {
+    background-color: #fcd66c80;
+    opacity: 0.9;
+    color: #ffffff;
 }
 
 .latest-img-container > img {
@@ -436,6 +482,11 @@ section.latest-articles {
 .human-stories-img-container {
     width: 140px;
     height: 116px;
+    transition: 0.5s;
+}
+
+.human-stories-img-container:hover {
+    transform: scale(1.2);
 }
 
 .human-stories-img-container > img {
