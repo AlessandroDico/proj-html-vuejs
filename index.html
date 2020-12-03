@@ -286,10 +286,9 @@
             <footer>
                 <div class="container">
                     <div class="footer-top">
-                        <small>&copy;</small>
                         <div class="copyright-container" v-for="voice in footerVoices">
-                            <a :href="voice.link" v-if="voice.link">{{voice.write}}</a>
-                            <p v-else>{{voice.write}}</p>
+                            <a :href="voice.link" v-if="voice.link" class="prova">{{voice.write}}</a>
+                            <p v-else class="prova2">{{voice.write}}</p>
                         </div>
                     </div>
                     <div class="footer-bottom">

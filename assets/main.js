@@ -21,17 +21,14 @@ var app = new Vue ({
         ],
         footerVoices: [
             {
-                write: 'Copyright 2012 - ',
-            },
-            {
-                write: '2020 Avada theme by',
+                write: 'Copyright 2012 - 2020 Avada theme by',
             },
             {
                 write: 'theme fusion',
                 link: 'https://theme-fusion.com/'
             },
             {
-                write: '| All rights reserved | ',
+                write: 'All rights reserved',
             },
             {
                 write: 'Powered by wordpress',
