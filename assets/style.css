@@ -875,6 +875,7 @@ footer {
         background-color: #ffffff;
         position: fixed;
         border-bottom: 1px solid #bababc;
+        z-index: 2;
     }
 
     .header-right-scroll {
