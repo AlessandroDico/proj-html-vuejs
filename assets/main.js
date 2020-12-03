@@ -1,12 +1,24 @@
 var app = new Vue ({
     el: '#root',
     data: {
-        menuVoices: {
-                home: '#',
-                mission: '#',
-                causes: '#',
-                journal: '#',
+        menuVoices:[
+            {
+                write: 'home',
+                link: '#',
             },
+            {
+                write: 'mission',
+                link: '#',
+            },
+            {
+                write: 'causes',
+                link: '#',
+            },
+            {
+                write: 'journal',
+                link: '#',
+            },
+        ],
         footerVoices: [
             {
                 write: 'Copyright 2012 - ',

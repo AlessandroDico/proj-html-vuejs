@@ -26,9 +26,9 @@
                         </div>
                         <div class="header-right">
                             <!-- creiamo il menu inizialmente popolato staticamente -->
-                            <ul v-for="(voice, key, index) in menuVoices">
+                            <ul v-for="voice in menuVoices">
                                 <li>
-                                    <a :href="voice">{{key}}</a>
+                                    <a :href="voice.link">{{voice.write}}</a>
                                 </li>
                             </ul>
                             <button type="button">{{headerButton}}</button>
