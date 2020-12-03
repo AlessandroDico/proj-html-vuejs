@@ -57,6 +57,8 @@ var app = new Vue ({
         logoHeader: 'avada-charity-logo.png',
         logoHeaderMobile: 'avada-charity-mobile-logo-retina.png',
         headerRightClass: 'header-right',
+        lastBrakePoint: 972,
+        pxBeforeScroll: 20,
         changeHeader: null,
         hiddenMenu: false,
     },
@@ -65,11 +67,11 @@ var app = new Vue ({
     // quando lo scroll nella 'window' è maggiore di 20px (window.scrollY)
     //quando la larghezza della window è sopra si 972px (window.innerWidth)
         changeOnScroll(){
-            if (this.headerRightClass = 'header-right' && window.scrollY > 20 && window.innerWidth > 972) {
+            if (this.headerRightClass = 'header-right' && window.scrollY > this.pxBeforeScroll && window.innerWidth > this.lastBrakePoint) {
                 this.headerRightClass = 'header-right-scroll';
                 this.changeHeader = 'header-scroll';
                 this.logoHeader = this.logoHeaderMobile;
-            } else if (window.innerWidth < 972) {
+            } else if (window.innerWidth < this.lastBrakePoint) {
                 this.headerRightClass = 'header-right';
                 this.changeHeader = 'null';
                 this.logoHeader = this.logoHeaderMobile;
@@ -81,9 +83,9 @@ var app = new Vue ({
         },
         //cambio logo a seconda della larghezza
         changeLogoOnWidth(){
-            if (window.innerWidth < 972) {
+            if (window.innerWidth < this.lastBrakePoint) {
                 this.logoHeader = this.logoHeaderMobile;
-            } else if (window.scrollY < 20){
+            } else if (window.scrollY < this.pxBeforeScroll){
                 this.logoHeader = 'avada-charity-logo.png';
             }
         },
@@ -106,13 +108,7 @@ var app = new Vue ({
         this.changeLogoOnWidth();
 //evento che rimane in ascolto al ridimensionamento della pagina
         window.addEventListener('resize', this.changeLogoOnWidth);
-        // this.$nextTick(function(){
-        //     if (window.innerWidth < 972) {
-        //         this.logoHeader = this.logoHeaderMobile;
-        //     } else {
-        //         this.logoHeader = 'avada-charity-logo.png';
-        //     }
-        // })
+
     },
 
 
