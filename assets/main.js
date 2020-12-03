@@ -73,11 +73,33 @@ var app = new Vue ({
                 this.changeHeader = 'null';
                 this.logoHeader = 'avada-charity-logo.png';
             }
+        },
+        //cambio logo a seconda della larghezza
+        changeLogoOnWidth(){
+            if (window.innerWidth < 972) {
+                this.logoHeader = this.logoHeaderMobile;
+            } else {
+                this.logoHeader = 'avada-charity-logo.png';
+            }
         }
 
     },
     mounted(){
+
+//evento che rimane in ascolto allo scroll della pagina
         window.addEventListener('scroll', this.changeOnScroll);
+
+//richiamo la funzione in modo che sia pronta quando carica la pagina e inoltre dovrò invocarla al ridimensionamento della pagina
+        this.changeLogoOnWidth();
+//evento che rimane in ascolto al ridimensionamento della pagina
+        window.addEventListener('resize', this.changeLogoOnWidth);
+        // this.$nextTick(function(){
+        //     if (window.innerWidth < 972) {
+        //         this.logoHeader = this.logoHeaderMobile;
+        //     } else {
+        //         this.logoHeader = 'avada-charity-logo.png';
+        //     }
+        // })
     },
 
 

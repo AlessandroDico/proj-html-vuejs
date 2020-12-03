@@ -68,7 +68,7 @@ header {
     height: 90px;
     position: absolute;
     width: 100%;
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
 }
 
 .header-container {
