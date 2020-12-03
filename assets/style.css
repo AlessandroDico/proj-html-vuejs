@@ -302,7 +302,7 @@ section.our-values {
 
 .values-box > button {
     background-color: #fcd66c;
-    width: 131px;
+    width: 130px;
     margin: 20px auto;
 }
 
@@ -323,7 +323,7 @@ section.our-values {
     justify-content: center;
     flex-direction: column;
 }
-
+/*effetto shutter out horizzontal per le card*/
 .causes-img-container {
     max-width: 345px;
     max-height: 258px;
@@ -331,30 +331,59 @@ section.our-values {
     min-height: 138px;
     margin: 0 20px;
     position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
-.causes-img-container > .overlay {
-    width: 100%;
-    height: 100%;
+.causes-img-container::before {
+    content: "";
     position: absolute;
     top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: transparent;
+    background-color: #fcd66c80;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+.causes-img-container:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    animation: fadeIn 0.3s linear;
+}
+/*keyframes per animation (usato anche nella sezione latest articles)*/
+@keyframes fadeIn {
+     0% {
+         -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+/* effetto per visualizzare la scritta */
+.causes-img-container > .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    opacity: 0;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .causes-img-container:hover > .overlay {
-    background-color: #fcd66c80;
     opacity: 0.9;
+    display: block;
     color: #ffffff;
 }
-
+/**/
 .causes-img-container > img {
     background-color: #fcd66c;
     width: 100%;
@@ -389,44 +418,64 @@ section.latest-articles {
     max-width: 1200px;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
     margin: 40px 0;
+    flex-direction: column;
 }
+/*
+.latest-articles-bottom {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+} */
 
 /* parte di sinistra */
 
-.latest-articles-bottom-left {
+/* .latest-articles-bottom-left {
     max-width: 50%;
     margin-right: 30px;
     -webkit-box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);
     box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);;
+} */
+.latest-articles-bottom-left {
+    max-width: 100%;
+    -webkit-box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);
+    box-shadow: -1px 1px 3px 1px rgba(233,200,153,0.84);
 }
 
+/*PROVE*/
 .latest-img-container {
     width: 100%;
-    height: 420px;
     position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
-
-.latest-img-container > .overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
+.latest-img-container::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: transparent;
-    text-transform: uppercase;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
+    content: "Understanding community complexities";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fcd66c80;
+    color: #ffffff;
+    font-size: 20px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
 }
 
-.latest-img-container:hover > .overlay {
-    background-color: #fcd66c80;
-    opacity: 0.9;
-    color: #ffffff;
+/* keyframes preso dalla section recent causes */
+.latest-img-container:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    animation: fadeIn 0.3s linear;
 }
 
 .latest-img-container > img {
@@ -438,19 +487,29 @@ section.latest-articles {
 
 .latest-img-paragraph {
     padding: 10px;
-    border-top: 1px solid #bababc;
+    /* border-top: 1px solid #bababc; */
 }
 /* parte di destra */
-
+/*
 .latest-articles-bottom-right {
     max-width: 50%;
+} */
+
+.latest-articles-bottom-right {
+    margin-top: 40px;
 }
 
 .human-stories-container {
     display: flex;
     height: 25%;
     padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #fcd66c;
+    padding: 10px;
+    margin: 10px 0;
 }
+
 
 :last-child.human-stories-container {
     padding-bottom: 0;
@@ -482,7 +541,7 @@ section.latest-articles {
 .latest-img-paragraph > p,
 .human-stories-paragraph > p {
     font-size: 13px;
-    line-height: 30px;
+    /* line-height: 30px; */
 }
 
 .latest-articles button {
@@ -710,6 +769,30 @@ footer {
         margin: 20px;
     }
 
+    /* -----LATEST ARTICLES----- */
+
+    .latest-img-container {
+        height: 420px;
+    }
+
+    .human-stories-container {
+        /* display: flex;
+        height: 25%;
+        padding-bottom: 20px;
+        align-items: center;
+        padding: 10px;
+        margin: 10px 0; */
+        margin: 10px 0;
+        padding: 0;
+        flex-direction: row;
+        align-items: flex-start;
+        border: none;
+    }
+
+    .human-stories-paragraph {
+    padding: 0 60px;
+    }
+
 
 
 }
@@ -788,6 +871,37 @@ footer {
         margin: 0 10px;
         padding: 0;
     }
+
+    /* LATEST ARTICLES */
+
+    .latest-articles-bottom {
+        /* width: 100%;
+        max-width: 1200px;
+        display: flex;
+        align-items: flex-start;
+        margin: 40px 0; */
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* parte di sinistra */
+    .latest-articles-bottom-left {
+        max-width: 50%;
+        margin-right: 30px;
+    }
+
+    /* parte di destra */
+
+    .latest-articles-bottom-right {
+        max-width: 50%;
+        margin-top: 0;
+    }
+
+    .human-stories-paragraph {
+    padding: 0 10px;
+    }
+
+
 
 
 }
