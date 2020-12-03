@@ -63,7 +63,6 @@ button {
 }
 
 /* ----------FINE REGOLE GENERICHE--------- */
-
 header {
     height: 90px;
     position: absolute;
@@ -104,8 +103,36 @@ header {
 .hamburger-menu {
     font-size: 30px;
     color: #fcd66c;
+    cursor: pointer;
+}
+/* --MENU NASCOSTO-- */
+.mobile-hidden-menu {
+    background-color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.2s linear;
 }
 
+.mobile-hidden-menu :first-child {
+    border-top: 1px solid #bababc;
+}
+
+header > div:nth-child(5) a:nth-child(1){
+    border-bottom: 1px solid #bababc;
+}
+
+.mobile-hidden-menu > a {
+    display: block;
+    width: 100%;
+    color: #353841;
+    padding: 20px 0 20px 50px;
+    padding: 10px 0 20px 50px;
+    font-size: 10px;
+}
+
+
+.mobile-hidden-menu:hover {
+    background-color: #fcd66c;
+}
 
 /* ------------INIZIO SEZIONE JUMBOTRON------------ */
 
@@ -667,6 +694,11 @@ footer {
         width: 300px;
     }
 
+    .mobile-hidden-menu > a {
+        padding: 20px 0 20px 50px;
+        font-size: 15px;
+    }
+
     /* ---JUMBO--- */
     .jumbotron {
         padding: 220px 0;
@@ -834,7 +866,52 @@ footer {
     .header-right > button:hover {
         background-color: black;
     }
+    /* MENU NASCOSTO */
+    .mobile-hidden-menu {
+        display: none;
+    }
+/* ----------- CAMBIO HEADER CON SCROLL------ */
+    header.header-scroll {
+        background-color: #ffffff;
+        position: fixed;
+        border-bottom: 1px solid #bababc;
+    }
 
+    .header-right-scroll {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .header-right-scroll > ul {
+        display: flex;
+    }
+
+    .header-right-scroll > ul > li {
+        margin: 0 22px;
+    }
+
+    .header-right-scroll > ul > li > a {
+        color: #353841;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .header-right-scroll > ul > li > a:hover {
+        color: #fcd66c;
+    }
+
+    .header-right-scroll > button {
+        background-color: #fcd66c;
+        margin-left: 25px;
+    }
+
+    .header-right-scroll > button:hover {
+        background-color: black;
+    }
+    /* -----------FINE CAMBIO HEADER CON SCROLL------ */
     /* ---JUMBO--- */
     .jumbotron {
         padding: 300px 0;
@@ -894,50 +971,6 @@ footer {
 
     .human-stories-paragraph {
         padding: 0 10px;
-    }
-
-
-/*prove cambio header a scroll*/
-
-    header.header-scroll {
-        background-color: #ffffff;
-        position: fixed;
-        border-bottom: 1px solid #bababc;
-    }
-
-    .header-right-scroll {
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-
-    .header-right-scroll > ul {
-        display: flex;
-    }
-
-    .header-right-scroll > ul > li {
-        margin: 0 22px;
-    }
-
-    .header-right-scroll > ul > li > a {
-        color: #353841;
-        padding: 5px;
-        font-size: 15px;
-    }
-
-    .header-right-scroll > ul > li > a:hover {
-        color: #fcd66c;
-    }
-
-    .header-right-scroll > button {
-        background-color: #fcd66c;
-        margin-left: 25px;
-    }
-
-    .header-right-scroll > button:hover {
-        background-color: black;
     }
 
 

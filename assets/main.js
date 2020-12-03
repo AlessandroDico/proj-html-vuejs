@@ -57,7 +57,8 @@ var app = new Vue ({
         logoHeader: 'avada-charity-logo.png',
         logoHeaderMobile: 'avada-charity-mobile-logo-retina.png',
         headerRightClass: 'header-right',
-        changeHeader: null
+        changeHeader: null,
+        hiddenMenu: false,
     },
     methods: {
     // creo una funzione che allo scroll cambia le classi all header e all header right
@@ -84,6 +85,14 @@ var app = new Vue ({
                 this.logoHeader = this.logoHeaderMobile;
             } else if (window.scrollY < 20){
                 this.logoHeader = 'avada-charity-logo.png';
+            }
+        },
+        // al click rendo visibile o meno l'hamburger menu
+        getMenuVisible(){
+            if (this.hiddenMenu == false) {
+                this.hiddenMenu = true;
+            } else {
+                this.hiddenMenu = false;
             }
         }
 
