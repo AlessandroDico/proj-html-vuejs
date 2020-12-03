@@ -68,6 +68,10 @@ var app = new Vue ({
                 this.headerRightClass = 'header-right-scroll';
                 this.changeHeader = 'header-scroll';
                 this.logoHeader = this.logoHeaderMobile;
+            } else if (window.innerWidth < 972) {
+                this.headerRightClass = 'header-right';
+                this.changeHeader = 'null';
+                this.logoHeader = this.logoHeaderMobile;
             } else {
                 this.headerRightClass = 'header-right';
                 this.changeHeader = 'null';
@@ -78,7 +82,7 @@ var app = new Vue ({
         changeLogoOnWidth(){
             if (window.innerWidth < 972) {
                 this.logoHeader = this.logoHeaderMobile;
-            } else {
+            } else if (window.scrollY < 20){
                 this.logoHeader = 'avada-charity-logo.png';
             }
         }
