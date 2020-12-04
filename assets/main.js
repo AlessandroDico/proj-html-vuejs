@@ -5,18 +5,22 @@ var app = new Vue ({
             {
                 write: 'home',
                 link: '#',
+                active: true,
             },
             {
                 write: 'mission',
                 link: '#',
+                active: false,
             },
             {
                 write: 'causes',
                 link: '#',
+                active: false,
             },
             {
                 write: 'journal',
                 link: '#',
+                active: false,
             },
         ],
         footerVoices: [
@@ -91,11 +95,26 @@ var app = new Vue ({
         },
         // al click rendo visibile o meno l'hamburger menu
         getMenuVisible(){
-            if (this.hiddenMenu == false) {
-                this.hiddenMenu = true;
-            } else {
-                this.hiddenMenu = false;
-            }
+            this.hiddenMenu = !this.hiddenMenu;
+            // if (this.hiddenMenu == false) {
+            //     this.hiddenMenu = true;
+            // } else {
+            //     this.hiddenMenu = false;
+            // }
+        },
+        activeClass(i){
+            this.menuVoices.forEach((item, i) => {
+                item.active = false;
+            });
+
+            self = this.menuVoices[i];
+            self.active = false;
+            if (self.active == true) {
+                    self.active = false
+                } else {
+                    self.active = true
+                }
+
         }
 
     },

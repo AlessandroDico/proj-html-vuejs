@@ -105,6 +105,7 @@ header {
     color: #fcd66c;
     cursor: pointer;
 }
+
 /* --MENU NASCOSTO-- */
 .mobile-hidden-menu {
     background-color: #ffffff;
@@ -131,6 +132,10 @@ header > div:nth-child(5) a:nth-child(1){
 
 
 .mobile-hidden-menu:hover {
+    background-color: #fcd66c;
+}
+
+.mobile-hidden-menu > a.active {
     background-color: #fcd66c;
 }
 
@@ -854,6 +859,7 @@ footer {
         font-size: 15px;
     }
 
+    .header-right > ul > li > a.active,
     .header-right > ul > li > a:hover {
         color: #fcd66c;
     }

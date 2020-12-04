@@ -25,9 +25,10 @@
                             </div>
                         </div>
                         <div :class="headerRightClass">
-                            <ul v-for="voice in menuVoices">
+                            <ul v-for="(voice, index) in menuVoices">
                                 <li>
-                                    <a :href="voice.link">{{voice.write}}</a>
+                                    <a :class="voice.active == true? 'active' : '' "
+                                    @click="activeClass(index)" :href="voice.link">{{voice.write}}</a>
                                 </li>
                             </ul>
                             <button type="button">{{headerButton}}</button>
@@ -37,8 +38,9 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="hiddenMenu" class="mobile-hidden-menu" v-for="voice in menuVoices">
-                    <a href="voice.link">{{voice.write}}</a>
+                <div v-if="hiddenMenu" class="mobile-hidden-menu" v-for="(voice, index) in menuVoices">
+                    <a :class="voice.active == true? 'active' : '' "
+                    @click="activeClass(index)" :href="voice.link">{{voice.write}}</a>
                 </div>
             </header>
             <!-- FINE HEADER -->
