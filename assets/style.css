@@ -831,6 +831,7 @@ footer {
     header {
         height: 110px;
         background-color: transparent;
+        transition: 0.2s linear;
     }
 
     .hamburger-menu {
@@ -882,6 +883,7 @@ footer {
         position: fixed;
         border-bottom: 1px solid #bababc;
         z-index: 2;
+        transition: 0.2s linear;
     }
 
     .header-right-scroll {
