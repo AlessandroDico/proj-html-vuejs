@@ -109,11 +109,14 @@ var app = new Vue ({
 
             self = this.menuVoices[i];
             self.active = false;
-            if (self.active == true) {
-                    self.active = false
-                } else {
-                    self.active = true
-                }
+
+            // if (self.active == true) {
+            //         self.active = false
+            //     } else {
+            //         self.active = true
+            //     }
+            // questo if / else equivale a..
+            self.active = !self.active;
 
         }
 
